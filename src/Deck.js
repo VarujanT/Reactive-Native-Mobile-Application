@@ -6,7 +6,7 @@ import {
      Dimensions
     } from 'react-native';
 
-const SCREEN_WIDTH = Demensions.get('window').widht;
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Deck extends Component {
     constructor(props){
@@ -27,7 +27,7 @@ class Deck extends Component {
     getCardStyle(){
         const {position}  = this.state;
         const rotate = position.x.interpolate({
-            inputRange:[-SCREEN_WIDTH * 1.5, 0, SCREEN_WIDTH * 1.5],
+            inputRange: [-SCREEN_WIDTH * 1.5, 0, SCREEN_WIDTH * 1.5],
             outputRange: ['-120deg', '0deg','120deg']
         });
 
